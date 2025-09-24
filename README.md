@@ -1,2 +1,26 @@
-# 7
-HTML-7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <h2> Email validation</h2>
+    <input type ="text" id="email" placeholder="Enter email">
+    <button onclick="CheckEmail()">Check </button>
+    <p id="out"></p>
+    <script>
+        function CheckEmail(){
+            let email=document.getElementById("email").value;
+            let pattern=/^[\w.-]+@[\w.-]+\.\w{2,3}$/;
+            if (pattern.test(email)){
+                document.getElementById("out").innerText= "valid email ✅";
+            }
+            else{
+                document.getElementById("out").innerText= "Invalid email ❌";
+            }
+        
+        }
+    </script>
+</body>
+</html>
